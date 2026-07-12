@@ -91,6 +91,17 @@ def ejecutar_pruebas():
 
     print("\nSistema ejecutado correctamente.\n")
 
+    # OPERACIÓN 11 - try/except/else/finally
+    try:
+        nueva_reserva = Reserva(cliente1, asesoria, 2)
+    except Exception as e:
+        registrar_error(e)
+    else:
+        print("\nReserva creada usando bloque else.")
+        print(nueva_reserva.mostrar_informacion())
+    finally:
+        print("Finalizó el proceso de creación de la reserva.\n")
+
 
 if __name__ == "__main__":
     ejecutar_pruebas()
